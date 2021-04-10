@@ -7,7 +7,8 @@
 
 :root {
   --twitter: #1da1f1;
-  --hover: #e7feff;
+  --hover: #e8f5fd;
+  --border: lightgray;
 }
 
 .container {
@@ -19,3 +20,149 @@
 }
 
 /* LEFT SIDE */
+.left-content {
+  display: grid;
+  grid-template:
+    "logo" 50px
+    "navigation" auto
+    "tweet" 135px
+    "user" 90px /
+    1fr;
+
+  border: 0.3px solid var(--border);
+
+  padding-top: 15px;
+  padding-left: 80px;
+}
+
+.logo {
+  grid-area: logo;
+  padding-left: 10px;
+}
+
+.logo:hover img {
+  background-color: var(--hover);
+  border-radius: 25px;
+}
+.navigation {
+  grid-area: navigation;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  margin-right: 35px;
+  display: grid;
+  grid-gap: 5px;
+}
+
+.home,
+.explore,
+.notifications,
+.messages,
+.bookmarks,
+.lists,
+.profile,
+.more {
+  display: grid;
+  grid-template: "nav-svg a" / 40px auto;
+  grid-gap: 7px;
+}
+
+.nav-svg {
+  display: grid;
+  place-self: center;
+}
+
+.navigation a:hover,
+.home:hover,
+.explore:hover,
+.notifications:hover,
+.messages:hover,
+.bookmarks:hover,
+.lists:hover,
+.profile:hover,
+.more:hover {
+  background-color: var(--hover);
+  border-radius: 25px;
+}
+
+.navigation a:hover {
+  color: var(--twitter);
+}
+
+.navigation a {
+  display: grid;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
+}
+
+.tweet {
+  grid-area: tweet;
+}
+
+.tweet a {
+  display: grid;
+  margin-right: 13px;
+  padding: 13px;
+  justify-content: center;
+  border-radius: 22px;
+  background-color: var(--twitter);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tweet a:hover {
+  background-color: #1c92da;
+}
+
+.user {
+  grid-area: user;
+  display: grid;
+  grid-template: "person-img username dots-svg" / 50px auto 30px;
+  margin: 15px 15px;
+}
+
+.user:hover {
+  background-color: var(--hover);
+  border-radius: 25px;
+}
+
+.username {
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 10px;
+  justify-content: flex-start;
+  align-content: start;
+  grid-gap: 2px;
+  margin-left: 10px;
+}
+
+.username .name {
+  place-self: center;
+  font-weight: bold;
+}
+
+.username .nickname {
+  justify-self: top;
+  color: var(--border);
+}
+
+.dots-svg {
+  height: 20px;
+}
+
+.person-img {
+  align-content: flex-start;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.logo img {
+  height: 25px;
+}
+
+.nav-svg {
+  height: 25px;
+}
