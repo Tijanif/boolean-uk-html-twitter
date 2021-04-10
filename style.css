@@ -166,3 +166,122 @@
 .nav-svg {
   height: 25px;
 }
+
+/* MAIN SECTION */
+
+.main-content {
+  display: grid;
+  grid-template:
+    "home-card" 50px
+    "tweet-section" 90px
+    "tweet-card" 1fr
+    /
+    1fr;
+
+  border: 0.3px solid var(--border);
+}
+
+/* home card */
+.home-card {
+  grid-area: home-card;
+  display: grid;
+  grid-template: "home-text svg-home" / 1fr 40px;
+
+  padding-top: 20px;
+  border: 0.3px solid var(--border);
+}
+
+.home-text {
+  grid-area: home-text;
+  margin-left: 20px;
+}
+
+.svg-home {
+  grid-area: svg-home;
+}
+/* TWEET SECTION */
+.tweet-section {
+  grid-area: tweet-section;
+
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template:
+    "avatar-section tweet-contents"
+    "avatar-section tweet-links";
+}
+
+.avatar-section {
+  grid-area: avatar-section;
+  width: 50px;
+}
+.tweet-section-img {
+  margin: 10px;
+}
+.tweet-contents {
+  grid-area: tweet-contents;
+  display: grid;
+}
+.textarea-whats-happening {
+  margin-top: 25px;
+  /* margin-left: 20px; */
+  border: none;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+/* .everyone-can-reply {
+  margin: 20px;
+}
+
+.globe-button,
+.globe-svg-content {
+  border: none;
+  height: 50px;
+  background-color: #fff;
+  color: var(--twitter);
+}
+.svg-globe {
+  height: 24px;
+  width: 25px;
+  margin-right: 10px;
+} */
+
+/*  links */
+.tweet-links {
+  display: grid;
+
+  grid-area: tweet-links;
+  margin-top: 25px;
+  display: grid;
+  grid-template: "space form-svg tweet"/ 10px 1fr auto;
+}
+
+.space {
+  grid-area: space;
+}
+.left-links {
+  grid-area: left-links;
+  grid-area: form-svg;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 30px);
+}
+
+.right-tweets {
+  grid-area: tweet;
+}
+.tweet {
+  height: 20px;
+  margin-right: 15px;
+}
+.tweet-button {
+  border: none;
+  background-color: #9bd1f9;
+  color: #fff;
+  padding: 8px;
+  border-radius: 22px;
+  font-weight: bold;
+}
+/* TWEET CARD */
+.tweet-card {
+  grid-area: tweet-card;
+}
