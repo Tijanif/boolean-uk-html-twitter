@@ -200,88 +200,181 @@
   grid-area: svg-home;
 }
 /* TWEET SECTION */
-.tweet-section {
-  grid-area: tweet-section;
-
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-template:
-    "avatar-section tweet-contents"
-    "avatar-section tweet-links";
-}
-
-.avatar-section {
-  grid-area: avatar-section;
-  width: 50px;
-}
-.tweet-section-img {
-  margin: 10px;
-}
-.tweet-contents {
-  grid-area: tweet-contents;
-  display: grid;
-}
-.textarea-whats-happening {
-  margin-top: 25px;
-  /* margin-left: 20px; */
-  border: none;
-  font-size: 20px;
-  margin-bottom: 25px;
-}
-/* .everyone-can-reply {
-  margin: 20px;
-}
-
-.globe-button,
-.globe-svg-content {
-  border: none;
-  height: 50px;
-  background-color: #fff;
-  color: var(--twitter);
-}
-.svg-globe {
-  height: 24px;
-  width: 25px;
-  margin-right: 10px;
+/* .tweet-section {
 } */
 
-/*  links */
-.tweet-links {
+.tweethead {
+  border: 1px solid var(--border);
+  padding-bottom: 4px;
+}
+.tweethead-one {
   display: grid;
-
-  grid-area: tweet-links;
-  margin-top: 25px;
-  display: grid;
-  grid-template: "space form-svg tweet"/ 10px 1fr auto;
+  grid-template-columns: 70px 1fr;
 }
-
-.space {
-  grid-area: space;
+.tweethead img {
+  border-radius: 50%;
+  margin: 10px;
 }
-.left-links {
-  grid-area: left-links;
-  grid-area: form-svg;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(5, 30px);
-}
-
-.right-tweets {
-  grid-area: tweet;
-}
-.tweet {
-  height: 20px;
-  margin-right: 15px;
-}
-.tweet-button {
+.tweethead input {
   border: none;
-  background-color: #9bd1f9;
-  color: #fff;
-  padding: 8px;
-  border-radius: 22px;
-  font-weight: bold;
+
+  font-size: 18px;
+  margin-top: 0px;
+  padding: 12px;
+  margin-left: 5px;
 }
-/* TWEET CARD */
-.tweet-card {
-  grid-area: tweet-card;
+.tweethead-two {
+  display: flex;
+  padding-bottom: 5px;
+}
+.tweethead-two div {
+  flex: 2.5;
+  margin-left: 90px;
+  align-self: center;
+}
+.tweethead-two div svg {
+  margin-right: 10px;
+  transition: 0.2s;
+}
+.tweethead-two div svg:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 8px var(--hover);
+  background-color: var(--hover);
+}
+.tweethead-two button {
+  border: none;
+  border-radius: 20px;
+  padding: 12px 18px;
+  font-size: 16px;
+  background-color: var(--twitter);
+  color: #fff;
+  margin-right: 20px;
+  font-weight: bolder;
+}
+.tweethead-two button:active {
+  background-color: var(--twitter);
+}
+
+.tweet-one,
+.tweet-two,
+.tweet-three {
+  border: 2px solid var(--border);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 12px;
+  transition: 0.2s;
+  padding-right: 15px;
+}
+
+.tweet-one:hover {
+  background-color: #f7f7f7;
+}
+
+/* .tweet-text span{
+   
+    color: var(--special-yellow);
+
+} */
+
+.top-info {
+  padding: 10px;
+  padding-left: 50px;
+  color: #6e767d;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 15px auto;
+  align-content: center;
+}
+.top-info span {
+  padding-left: 10px;
+}
+
+.twitter-content {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  padding-bottom: 10px;
+}
+
+.twitter-content-two {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 5px;
+  padding-left: 5px;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+.blue-dots {
+  padding: 5px;
+  color: grey;
+  display: flex;
+  justify-self: center;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.blue-dots:hover {
+  color: #1ea2f2;
+  background-color: #e4eff7;
+  cursor: pointer;
+}
+
+.top-info,
+.tweet-text {
+  margin-top: -7px;
+}
+
+.top-info,
+.tweet-text img {
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.account-profile {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.tweet-footer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-top: 5px;
+}
+.tweet-footer div {
+  display: grid;
+  grid-template-columns: 22% 78%;
+  align-items: center;
+}
+.tweet-footer span {
+  font-size: 15px;
+  color: lightgrey;
+}
+.tweet-footer svg {
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.tweet-footer .blue:hover svg {
+  box-shadow: 0px 0px 0px 7px#6cb9d830;
+  background-color: #6cb9d830;
+}
+.tweet-footer .blue:hover span {
+  color: cyan;
+}
+.tweet-footer .green:hover svg {
+  box-shadow: 0px 0px 0px 7px#89f0d630;
+  background-color: #89f0d630;
+}
+.tweet-footer .green:hover span {
+  color: rgb(68, 212, 68);
+}
+.tweet-footer .pink:hover svg {
+  box-shadow: 0px 0px 0px 7px#f089b030;
+  background-color: #f089b030;
+}
+.tweet-footer .pink:hover span {
+  color: rgb(243, 31, 73);
 }
