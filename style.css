@@ -386,6 +386,7 @@
 
 /* Right Content */
 .right-content {
+  margin-left: 20px;
 }
 
 .search-form {
@@ -421,4 +422,54 @@
   outline: none;
   border: 1px solid var(--twitter);
   background-color: #fff;
+}
+
+/* right main content block section */
+.frame {
+  width: 80px;
+  height: 80px;
+
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.sidebar {
+  padding: 0 1rem;
+}
+
+.news-section {
+  padding: 1rem;
+
+  border-radius: 20px;
+  background-color: #eee;
+}
+
+.news-section h2 {
+  padding: 1rem;
+  border-bottom: 2px solid rgb(121, 117, 117);
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.articles-list li {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid rgb(121, 117, 117);
+}
+
+.small {
+  font-size: 0.675rem;
+  margin: 0;
 }
