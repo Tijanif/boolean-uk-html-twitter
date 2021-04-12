@@ -386,36 +386,38 @@
 
 /* Right Content */
 .right-content {
-  display: grid;
 }
 
 .search-form {
   margin: 20px;
-  /* height: 30px;
+
+  border-radius: 30px;
+  height: 35px;
+  padding: 5px;
   display: grid;
-  grid-template: "search-svg searc-input"; */
+  grid-template-columns: auto 1fr;
+  grid-gap: 1px;
+  background-color: #eceef0;
 }
 
 .search-svg {
-  grid-area: search-svg;
+  width: 30px;
+  height: 30px;
 }
 
 .search-input {
-  grid-area: search-input;
-  background-color: #eceef0;
-  border: none;
   color: grey;
-  height: 30px;
-  border-radius: 20px;
-  padding: 24px;
   width: 100%;
+  border: none;
+  height: 20px;
+  background-color: #eceef0;
 }
 
-/* .search-input:active {
-  border: 1px solid var(--twitter);
-  border-radius: 20px;
-} */
 .search-input:focus {
+  outline: none;
+}
+
+.search-form:focus {
   outline: none;
   border: 1px solid var(--twitter);
   background-color: #fff;
