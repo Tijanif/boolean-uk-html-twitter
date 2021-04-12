@@ -179,6 +179,7 @@
     1fr;
 
   border: 0.3px solid var(--border);
+  overflow: scroll;
 }
 
 /* home card */
@@ -189,6 +190,8 @@
 
   padding-top: 20px;
   border: 0.3px solid var(--border);
+  /* position: sticky;
+  top: 0; */
 }
 
 .home-text {
@@ -256,9 +259,7 @@
   background-color: var(--twitter);
 }
 
-.tweet-one,
-.tweet-two,
-.tweet-three {
+.tweet-one {
   border: 2px solid var(--border);
   border-bottom: none;
   border-left: none;
@@ -337,6 +338,10 @@
   border-radius: 50%;
   object-fit: cover;
   margin-left: 20px;
+}
+
+.tweet-img {
+  width: 100%;
 }
 
 .tweet-footer {
